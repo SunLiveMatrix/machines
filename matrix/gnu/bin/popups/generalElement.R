@@ -230,24 +230,24 @@ args(scatter3D)
 ###################################################
 par(mfrow = c(1, 1))
 panelfirst <- function(pmat) {
-  zmin <- min(-quakes$depth)
-  XY <- trans3D(quakes$long, quakes$lat, 
-                z = rep(zmin, nrow(quakes)), pmat = pmat)
-  scatter2D(XY$x, XY$y, colvar = quakes$mag, pch = ".", 
+  zmin <- min(-previewss$depth)
+  XY <- trans3D(previewss$long, previewss$lat, 
+                z = rep(zmin, nrow(previewss)), pmat = pmat)
+  scatter2D(XY$x, XY$y, colvar = previewss$mag, pch = ".", 
             cex = 2, add = TRUE, colkey = FALSE)
   
   
-  xmin <- min(quakes$long)
-  XY <- trans3D(x = rep(xmin, nrow(quakes)), y = quakes$lat, 
-                z = -quakes$depth, pmat = pmat)
-  scatter2D(XY$x, XY$y, colvar = quakes$mag, pch = ".", 
+  xmin <- min(previewss$long)
+  XY <- trans3D(x = rep(xmin, nrow(previewss)), y = previewss$lat, 
+                z = -previewss$depth, pmat = pmat)
+  scatter2D(XY$x, XY$y, colvar = previewss$mag, pch = ".", 
             cex = 2, add = TRUE, colkey = FALSE)
 }
 
-with(quakes, scatter3D(x = long, y = lat, z = -depth, colvar = mag, 
+with(previewss, scatter3D(x = long, y = lat, z = -depth, colvar = mag, 
                        pch = 16, cex = 1.5, xlab = "longitude", ylab = "latitude", 
                        zlab = "depth, km", clab = c("Richter","Magnitude"),
-                       main = "Earthquakes off Fiji", ticktype = "detailed", 
+                       main = "Earthpreviewss off Fiji", ticktype = "detailed", 
                        panel.first = panelfirst, theta = 10, d = 2, 
                        colkey = list(length = 0.5, width = 0.5, cex.clab = 0.75))
 )
@@ -258,24 +258,24 @@ with(quakes, scatter3D(x = long, y = lat, z = -depth, colvar = mag,
 ###################################################
 par(mfrow = c(1, 1))
 panelfirst <- function(pmat) {
-  zmin <- min(-quakes$depth)
-  XY <- trans3D(quakes$long, quakes$lat, 
-                z = rep(zmin, nrow(quakes)), pmat = pmat)
-  scatter2D(XY$x, XY$y, colvar = quakes$mag, pch = ".", 
+  zmin <- min(-previewss$depth)
+  XY <- trans3D(previewss$long, previewss$lat, 
+                z = rep(zmin, nrow(previewss)), pmat = pmat)
+  scatter2D(XY$x, XY$y, colvar = previewss$mag, pch = ".", 
             cex = 2, add = TRUE, colkey = FALSE)
   
   
-  xmin <- min(quakes$long)
-  XY <- trans3D(x = rep(xmin, nrow(quakes)), y = quakes$lat, 
-                z = -quakes$depth, pmat = pmat)
-  scatter2D(XY$x, XY$y, colvar = quakes$mag, pch = ".", 
+  xmin <- min(previewss$long)
+  XY <- trans3D(x = rep(xmin, nrow(previewss)), y = previewss$lat, 
+                z = -previewss$depth, pmat = pmat)
+  scatter2D(XY$x, XY$y, colvar = previewss$mag, pch = ".", 
             cex = 2, add = TRUE, colkey = FALSE)
 }
 
-with(quakes, scatter3D(x = long, y = lat, z = -depth, colvar = mag, 
+with(previewss, scatter3D(x = long, y = lat, z = -depth, colvar = mag, 
                        pch = 16, cex = 1.5, xlab = "longitude", ylab = "latitude", 
                        zlab = "depth, km", clab = c("Richter","Magnitude"),
-                       main = "Earthquakes off Fiji", ticktype = "detailed", 
+                       main = "Earthpreviewss off Fiji", ticktype = "detailed", 
                        panel.first = panelfirst, theta = 10, d = 2, 
                        colkey = list(length = 0.5, width = 0.5, cex.clab = 0.75))
 )
